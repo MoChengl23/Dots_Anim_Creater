@@ -41,7 +41,7 @@ public static class AnimationUtil
 
                 anim.renderRange = GetAnimRenderRange(anim.renderIndexs, renderRange);
 
-                anim.animBlob = CreateAnimBlobRef(anim, textures.Count);
+                anim.animElement = CreateAnimBlobRef(anim, textures.Count);
 
 
                 animationDic.TryAdd(name, anim);
@@ -117,26 +117,29 @@ public static class AnimationUtil
         return res;
     }
 
-    private static BlobAssetReference<AnimationBlobElement> CreateAnimBlobRef(AnimationScriptableObject anim, int index)
+    private static AnimationElement CreateAnimBlobRef(AnimationScriptableObject anim, int index)
     {
         BlobBuilder blobBuilder = new BlobBuilder(Allocator.Temp);
 
 
-        ref AnimationBlobElement animBlob = ref blobBuilder.ConstructRoot<AnimationBlobElement>();
-        animBlob.totalFrames = anim.totalFrames;
-        animBlob.length = anim.length;
-        animBlob.index = index;
-        animBlob.textureSize = anim.textureSize;
-        animBlob.vertexCount = anim.vertexCount;
-        animBlob.framesPerTexture = (int)((anim.textureSize.x * anim.textureSize.y) / (anim.vertexCount * 2));
-        animBlob.scale = anim.animScalar;
-        // animBlob.randerRange = 
+        AnimationElement animBlob = new AnimationElement
+        {
 
 
-        BlobAssetReference<AnimationBlobElement> animationBlobElementRef
-         = blobBuilder.CreateBlobAssetReference<AnimationBlobElement>(Allocator.Persistent);
-        blobBuilder.Dispose();
-        return animationBlobElementRef;
+            totalFrames = anim.totalFrames,
+            length = anim.length,
+            index = index,
+            textureSize = anim.textureSize,
+            vertexCount = anim.vertexCount,
+            framesPerTexture = (int)((anim.textureSize.x * anim.textureSize.y) / (anim.vertexCount * 2)),
+            scale = anim.animScalar
+            //   randerRange = 
+        };
+
+        // BlobAssetReference<AnimationBlobElement> animationBlobElementRef
+        //  = blobBuilder.CreateBlobAssetReference<AnimationBlobElement>(Allocator.Persistent);
+        // blobBuilder.Dispose();
+        return animBlob;
 
 
     }
@@ -278,11 +281,11 @@ public static class AnimationUtil
         if (animationDic.TryGetValue(name, out var anim))
         {
             var animBlob = curAnim.currentAnimation;
-            int2 textureSize = animBlob.Value.textureSize;
-            int vertexCount = animBlob.Value.vertexCount;
-            int framesPerTexture = animBlob.Value.framesPerTexture;
+            int2 textureSize = animBlob.textureSize;
+            int vertexCount = animBlob.vertexCount;
+            int framesPerTexture = animBlob.framesPerTexture;
             int localOffset = (int)(curAnim.currentFrame / (float)framesPerTexture);
-            int textureIndex = animBlob.Value.index + localOffset;
+            int textureIndex = animBlob.index + localOffset;
             int frameOffset = (int)(curAnim.currentFrame % framesPerTexture);
             int pixelOffset = vertexCount * 2 * frameOffset;
 
@@ -290,41 +293,41 @@ public static class AnimationUtil
 
 
 
-            entityManager.SetComponentData<_CrossfadeAnimTextureIndex>(entity, new _CrossfadeAnimTextureIndex
-            {
-                Value = textureIndex
-            });
-            entityManager.SetComponentData<_CrossfadeAnimInfo>(entity, new _CrossfadeAnimInfo
-            {
-                Value = new float4(
-                    pixelOffset,
-                    vertexCount,
-                    textureSize.x,
-                    textureSize.y
-                )
-            });
+            // entityManager.SetComponentData<_CrossfadeAnimTextureIndex>(entity, new _CrossfadeAnimTextureIndex
+            // {
+            //     Value = textureIndex
+            // });
+            // entityManager.SetComponentData<_CrossfadeAnimInfo>(entity, new _CrossfadeAnimInfo
+            // {
+            //     Value = new float4(
+            //         pixelOffset,
+            //         vertexCount,
+            //         textureSize.x,
+            //         textureSize.y
+            //     )
+            // });
 
-            entityManager.SetComponentData<_CrossfadeStartTime>(entity, new _CrossfadeStartTime
-            {
-                Value = StaticData._shaderTime.y
-            });
-            entityManager.SetComponentData<_CrossfadeEndTime>(entity, new _CrossfadeEndTime
-            {
-                Value = StaticData._shaderTime.y + 0.1f
-            });
+            // entityManager.SetComponentData<_CrossfadeStartTime>(entity, new _CrossfadeStartTime
+            // {
+            //     Value = StaticData._shaderTime.y
+            // });
+            // entityManager.SetComponentData<_CrossfadeEndTime>(entity, new _CrossfadeEndTime
+            // {
+            //     Value = StaticData._shaderTime.y + 0.1f
+            // });
 
             entityManager.SetComponentData<_CrossfadeData>(entity, new _CrossfadeData
             {
                 Value = new float4x4(
                     new float4(textureIndex, 0, 0, 0),
                     new float4(pixelOffset, vertexCount, textureSize.x, textureSize.y),
-                    new float4(animBlob.Value.scale, 0),
+                    new float4(animBlob.scale, 0),
                     new float4(StaticData._shaderTime.y, StaticData._shaderTime.y + crossfadeDelay, 0, 0)
                 )
             });
- 
+
             SetAnimationData(anim, entity);
- 
+
 
         }
 
@@ -339,22 +342,22 @@ public static class AnimationUtil
 
             var animBlob = curAnim.currentAnimation;
 
-             
-            int2 textureSize = animBlob.Value.textureSize;
-            int vertexCount = animBlob.Value.vertexCount;
-            int framesPerTexture = animBlob.Value.framesPerTexture;
+
+            int2 textureSize = animBlob.textureSize;
+            int vertexCount = animBlob.vertexCount;
+            int framesPerTexture = animBlob.framesPerTexture;
             int indexOffset = (int)(curAnim.currentFrame / framesPerTexture);
-            int textureIndex = animBlob.Value.index + indexOffset;
+            int textureIndex = animBlob.index + indexOffset;
             int frameOffset = (int)(curAnim.currentFrame % framesPerTexture);
             int pixelOffset = vertexCount * 2 * frameOffset;
-            
+
 
             ecbPara.SetComponent<_CrossfadeData>(entityInQueryIndex, entity, new _CrossfadeData
             {
                 Value = new float4x4(
                     new float4(textureIndex, 0, 0, 0),
                     new float4(pixelOffset, vertexCount, textureSize.x, textureSize.y),
-                    new float4(animBlob.Value.scale, 0),
+                    new float4(animBlob.scale, 0),
                     new float4(StaticData.shaderTime.y, StaticData.shaderTime.y + crossfadeDelay, 0, 0)
                 )
             });
@@ -362,7 +365,7 @@ public static class AnimationUtil
 
 
             SetAnimationData(anim, entity, ecbPara, entityInQueryIndex);
-            curAnim.currentAnimation = anim.animBlob;
+            curAnim.currentAnimation = anim.animElement;
             curAnim.currentFrame = 0;
             curAnim.currentTime = 0;
 

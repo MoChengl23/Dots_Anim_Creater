@@ -7,7 +7,7 @@ using Unity.Mathematics;
 
 using Unity.Collections;
 
-public unsafe struct AnimationBlobElement
+public   struct AnimationElement
 {
    
 
@@ -21,8 +21,7 @@ public unsafe struct AnimationBlobElement
     public int vertexCount;
     public int framesPerTexture;
     public float3 scale;
-    // public int2 randerRange;
-
+ 
 
 
 

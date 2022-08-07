@@ -46,13 +46,13 @@ public class AnimationScriptableObject : ScriptableObject
 
     //动态赋值
     public int textureIndex;
-    
+
 
     public int4x4 renderRange;
 
-    public BlobAssetReference<AnimationBlobElement> animBlob;
-[Header("Render Indexs need modify by your self")]
-[Header("It represents which part should render in this anim")]
-public List<int> renderIndexs;
+    public AnimationElement animElement;
+    [Header("Render Indexs need modify by your self")]
+    [Header("It represents which part should render in this anim")]
+    public List<int> renderIndexs;
 
 }

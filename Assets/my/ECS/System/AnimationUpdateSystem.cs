@@ -24,8 +24,8 @@ public partial struct UpdateFrameJob : IJobEntity
     void Execute(ref AnimationData animationData)
     {
         var currentTime = animationData.currentTime + deltaTime;
-        var animationLength = animationData.currentAnimation.Value.length;
-        var totalFrames = animationData.currentAnimation.Value.totalFrames;
+        var animationLength = animationData.currentAnimation.length;
+        var totalFrames = animationData.currentAnimation.totalFrames;
 
         animationData.currentTime =
         currentTime < animationLength ?
@@ -86,8 +86,9 @@ public partial class AnimationUpdateSystem : ServiceSystem
 
     };
     int sum = 0;
-    protected override void OnCreate(){
- Debug.Log(11);
+    protected override void OnCreate()
+    {
+        Debug.Log(11);
     }
     protected override void OnStartRunning()
     {

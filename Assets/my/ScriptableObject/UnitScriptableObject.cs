@@ -87,7 +87,7 @@ public class UnitScriptableObject : ScriptableObject
         new BuiltinMaterialPropertyUnity_RenderingLayer { Value = new uint4(1, 0, 0, 0) });
         entityManager.AddComponentData<AnimationData>(entity, new AnimationData
         {
-            currentAnimation = defaultAnimation.animBlob
+            currentAnimation = defaultAnimation.animElement
 
         });
    
