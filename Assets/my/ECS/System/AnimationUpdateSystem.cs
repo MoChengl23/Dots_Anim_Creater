@@ -110,6 +110,17 @@ public partial class AnimationUpdateSystem : ServiceSystem
         var intsum = (int)sum;
         StaticData.shaderTime = StaticData._shaderTime;
 
+
+
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            var beSpawnedUnitSpriptableObject = Resources.Load<UnitScriptableObject>("Unit");
+            beSpawnedUnitSpriptableObject.CreateItself(EntityManager);
+
+        }
+
+
         var dontNeedCrossfadeQuery = GetEntityQuery(dntNeedCrossfade);
         var updateFrameJobHandle = new UpdateFrameJob
         {

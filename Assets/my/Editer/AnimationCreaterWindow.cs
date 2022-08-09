@@ -74,7 +74,7 @@ public class AnimationCreaterWindow : EditorWindow
     }
     private enum ShaderTextureQuality
     {
-        Quality_8_Bit__Low = TextureFormat.RGBA32,
+        // Quality_8_Bit__Low = TextureFormat.RGBA32,
         Quality_16_Bit__Medium = TextureFormat.RGBAHalf,
         Quality_32_Bit__High = TextureFormat.RGBAFloat,
     }
@@ -723,6 +723,7 @@ public class AnimationCreaterWindow : EditorWindow
         {
             vertexIndexUvs[i] = new Vector2(i, 0);
         }
+        
         mesh.uv4 = vertexIndexUvs;
 
         return mesh;

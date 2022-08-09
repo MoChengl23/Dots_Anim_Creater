@@ -18,6 +18,7 @@ public static class AnimationUtil
     public static ConcurrentDictionary<Material, List<Texture2D>> textureDic = new ConcurrentDictionary<Material, List<Texture2D>>();
     public static float crossfadeDelay = 0.3f;
 
+
     public static void AddAnimationList(List<AnimationScriptableObject> anims, Material material, List<Item> renderRange)
     {
         if (!textureDic.ContainsKey(material))
@@ -26,31 +27,35 @@ public static class AnimationUtil
         }
         if (textureDic.TryGetValue(material, out var textureArr))
         {
-            var textures = new List<Texture2D>();
+            List<Texture2D> textures = null;
             var names = anims.Select(x => x.animationName).ToArray();
 
             for (int i = 0; i < anims.Count; i++)
             {
                 var anim = anims[i];
                 var name = names[i];
+                if (animationDic.TryAdd(name, anim))
+                {
+                    if (textures == null)
+                        textures = new List<Texture2D>();
+
+                    var tempTextures = anim.textures;
+                    //update Animation Index
+                    anim.textureIndex = textures.Count;
+
+                    anim.renderRange = GetAnimRenderRange(anim.renderIndexs, renderRange);
+
+                    anim.animElement = CreateAnimBlobRef(anim, textures.Count);
 
 
-                var tempTextures = anim.textures;
-                //update Animation Index
-                anim.textureIndex = textures.Count;
 
-                anim.renderRange = GetAnimRenderRange(anim.renderIndexs, renderRange);
-
-                anim.animElement = CreateAnimBlobRef(anim, textures.Count);
-
-
-                animationDic.TryAdd(name, anim);
-                textures.AddRange(tempTextures);
+                    textures.AddRange(tempTextures);
+                }
 
             }
 
 
-
+            if(textures == null) return;
 
             textureArr.AddRange(textures);
             int totalTextures = textureArr.Count;

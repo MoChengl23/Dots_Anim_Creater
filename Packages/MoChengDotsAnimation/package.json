@@ -1,0 +1,22 @@
+{
+    "name": "com.mocheng.dots_animation",
+    "version": "0.0.1",
+    "displayName": "MoChengDotsAnimation",
+    "description": "MoCheng Dots Animation",
+    "unity": "2022.3",
+   
+    "dependencies": {
+     
+   },
+   "keywords": [
+      "Dots",
+      "Animation",
+      "MoCheng"
+    ],
+    "author": {
+      "name": "MoCheng",
+      "email": "mochenghh@gmail.com",
+      "url": "https://www.google.com"
+    }
+  }
+  
