@@ -1,0 +1,11 @@
+{
+    "name": "Undefined.ComMochengTest.Tests",
+    "references": [
+        "Undefined.ComMochengTest"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Undefined.ComMochengTest.Editor",
+    "references": [
+      "Undefined.ComMochengTest"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

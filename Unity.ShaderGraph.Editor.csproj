@@ -191,8 +191,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Interfaces\Graph\IEdge.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Views\ShaderPort.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Legacy\IMasterNode1.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Targets\VFXTarget.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Math\Advanced\AbsoluteNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Targets\VFXTarget.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Math\Vector\SphereMaskNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Interfaces\IGraphDataAction.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Graphs\SerializableVirtualTexture.cs" />
@@ -1091,8 +1091,14 @@
     <Reference Include="Unity.VisualScripting.TextureAssets">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.APIComparison.Framework">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.package-validation-suite@0.19.0-preview\Lib\Editor\Unity.APIComparison.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.package-validation-suite@0.19.0-preview\Lib\Editor\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>

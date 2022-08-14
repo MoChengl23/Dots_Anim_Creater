@@ -339,8 +339,14 @@
     <Reference Include="Unity.VisualScripting.TextureAssets">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.APIComparison.Framework">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.package-validation-suite@0.19.0-preview\Lib\Editor\Unity.APIComparison.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.package-validation-suite@0.19.0-preview\Lib\Editor\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>
@@ -741,6 +747,9 @@
     <Reference Include="UnityEditor.CacheServer">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
     </Reference>
+    <Reference Include="Undefined.ComMochengTest.Editor">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Undefined.ComMochengTest.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rendering.Hybrid.Editor">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Rendering.Hybrid.Editor.dll</HintPath>
     </Reference>
@@ -761,6 +770,9 @@
     </Reference>
     <Reference Include="Unity.Transforms">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageValidationSuite.Editor.Extension">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.PackageValidationSuite.Editor.Extension.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
@@ -834,11 +846,17 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Undefined.ComMochengTest">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Undefined.ComMochengTest.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Scenes.dll</HintPath>
+    </Reference>
+    <Reference Include="MoCheng.DotsAnimation">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\MoCheng.DotsAnimation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes.Editor">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Scenes.Editor.dll</HintPath>
@@ -851,6 +869,12 @@
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Develop.Editor">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.PackageManagerUI.Develop.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageValidationSuite.Editor">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.PackageValidationSuite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.BuildUtils">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Entities.BuildUtils.dll</HintPath>

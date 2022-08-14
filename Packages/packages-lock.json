@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.mocheng.dots_animation": {
-      "version": "file:MoChengDotsAnimation",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.unity.burst": {
       "version": "1.6.6",
       "depth": 1,
@@ -136,6 +130,15 @@
       "depth": 2,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.package-validation-suite": {
+      "version": "0.19.0-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.nuget.mono-cecil": "0.1.6-preview.2"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.platforms": {
@@ -313,6 +316,16 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.upm.develop": {
+      "version": "0.4.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.20",
+        "com.unity.package-validation-suite": "0.19.0-preview"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.visualscripting": {
       "version": "1.7.8",

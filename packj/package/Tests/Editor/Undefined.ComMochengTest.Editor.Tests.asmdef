@@ -1,0 +1,14 @@
+{
+    "name": "Undefined.ComMochengTest.Editor.Tests",
+    "references": [
+        "Undefined.ComMochengTest.Editor",
+        "Undefined.ComMochengTest"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

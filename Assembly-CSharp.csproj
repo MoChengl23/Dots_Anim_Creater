@@ -44,20 +44,22 @@
     <Analyzer Include="E:\unity\Dots_Anim_Creater\Library\PackageCache\com.unity.entities@0.51.0-preview.32\Unity.Entities\SourceGenerators\Unity.Entities.SourceGen.AuthoringComponent.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\my\Spawn\ConfigData.cs" />
-     <Compile Include="Assets\my\Spawn\AllocatePool.cs" />
-     <Compile Include="Assets\my\ScriptableObject\UnitScriptableObject.cs" />
-     <Compile Include="Assets\my\ScriptableObject\AnimationScriptableObject.cs" />
-     <Compile Include="Assets\my\ECS\Component\AnimationMaterial.cs" />
-     <Compile Include="Assets\my\ECS\AnimationUtil.cs" />
-     <Compile Include="Assets\my\ECS\Component\AnimationElement.cs" />
-     <Compile Include="Assets\my\ECS\System\AnimationUpdateSystem.cs" />
-     <Compile Include="Assets\my\Spawn\ServiceSystem.cs" />
-     <Compile Include="Assets\my\ECS\Component\AnimationComponent.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\Spawn\ConfigData.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\Spawn\AllocatePool.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ScriptableObject\UnitScriptableObject.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ScriptableObject\AnimationScriptableObject.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ECS\Component\AnimationMaterial.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ECS\AnimationUtil.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ECS\Component\AnimationElement.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ECS\System\AnimationUpdateSystem.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\Spawn\ServiceSystem.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\ECS\Component\AnimationComponent.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\my\Editer\AnimationCreaterWindow.cs" />
-     <Compile Include="Assets\my\Spawn\SpawnUtil.cs" />
-     <None Include="Assets\my\Shader\ShaderGraph\MeshAnimator.hlsl" />
+     <Compile Include="Assets\MoChengDotsAnim1\Editer\AnimationCreaterWindow.cs" />
+     <Compile Include="Assets\MoChengDotsAnim1\Spawn\SpawnUtil.cs" />
+     <None Include="Assets\output\myshader.shader" />
+     <None Include="Assets\output\NewUnlitShader.shader" />
+     <None Include="Assets\MoChengDotsAnim1\Shader\ShaderGraph\MeshAnimator.hlsl" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -706,6 +708,9 @@
     <Reference Include="UnityEditor.CacheServer">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
     </Reference>
+    <Reference Include="Undefined.ComMochengTest.Editor">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Undefined.ComMochengTest.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rendering.Hybrid.Editor">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Rendering.Hybrid.Editor.dll</HintPath>
     </Reference>
@@ -726,6 +731,9 @@
     </Reference>
     <Reference Include="Unity.Transforms">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageValidationSuite.Editor.Extension">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.PackageValidationSuite.Editor.Extension.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
@@ -799,6 +807,9 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Undefined.ComMochengTest">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Undefined.ComMochengTest.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
     </Reference>
@@ -816,6 +827,12 @@
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Develop.Editor">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.PackageManagerUI.Develop.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageValidationSuite.Editor">
+        <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.PackageValidationSuite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.BuildUtils">
         <HintPath>E:\unity\Dots_Anim_Creater\Library\ScriptAssemblies\Unity.Entities.BuildUtils.dll</HintPath>
